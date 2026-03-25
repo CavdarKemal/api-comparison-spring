@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package product;
+
+option java_package = "de.cavdar.api.grpc.proto";
+option java_outer_classname = "ProductProto";
+option java_multiple_files = true;
+
+/**
+ * gRPC Service Definition – wird von protoc zu Java-Klassen kompiliert.
+ *
+ * Charakteristika (im Vergleich zu REST/GraphQL):
+ *  - Binärprotokoll (Protocol Buffers) statt JSON → sehr effizient
+ *  - Stark typisiert, Contract-first (Schema = Source of Truth)
+ *  - HTTP/2 als Transport → Multiplexing, Streaming möglich
+ *  - Code-Generierung für Client UND Server aus einem Schema
+ *  - Ideal für interne Microservice-Kommunikation
+ */
+service ProductService {
+    rpc GetProduct      (GetProductRequest)    returns (ProductResponse);
+    rpc ListProducts    (ListProductsRequest)  returns (ListProductsResponse);
+    rpc CreateProduct   (CreateProductRequest) returns (ProductResponse);
+    rpc UpdateProduct   (UpdateProductRequest) returns (ProductResponse);
+    rpc DeleteProduct   (DeleteProductRequest) returns (DeleteProductResponse);
+}
+
+// ===== Messages =====
+
+message Product {
+    int64  id          = 1;
+    string name        = 2;
+    string description = 3;
+    double price       = 4;
+}
+
+message GetProductRequest {
+    int64 id = 1;
+}
+
+message ListProductsRequest {}
+
+message ListProductsResponse {
+    repeated Product products = 1;
+}
+
+message CreateProductRequest {
+    string name        = 1;
+    string description = 2;
+    double price       = 3;
+}
+
+message UpdateProductRequest {
+    int64  id          = 1;
+    string name        = 2;
+    string description = 3;
+    double price       = 4;
+}
+
+message DeleteProductRequest {
+    int64 id = 1;
+}
+
+message DeleteProductResponse {
+    bool success = 1;
+}
+
+message ProductResponse {
+    Product product = 1;
+}

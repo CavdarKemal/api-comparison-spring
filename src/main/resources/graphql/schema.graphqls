@@ -1,0 +1,26 @@
+# GraphQL Schema – definiert den "Vertrag" zwischen Client und Server.
+# Spring for GraphQL liest diese Datei automatisch beim Start.
+
+type Query {
+    products: [Product!]!
+    product(id: ID!): Product
+}
+
+type Mutation {
+    createProduct(input: ProductInput!): Product!
+    updateProduct(id: ID!, input: ProductInput!): Product
+    deleteProduct(id: ID!): Boolean!
+}
+
+type Product {
+    id:          ID!
+    name:        String!
+    description: String
+    price:       Float!
+}
+
+input ProductInput {
+    name:        String!
+    description: String
+    price:       Float!
+}

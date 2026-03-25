@@ -19,8 +19,7 @@
 
     <properties>
         <java.version>25</java.version>
-        <!-- spring-grpc: offizielles Spring-Projekt, ggf. Version anpassen -->
-        <spring-grpc.version>0.9.0</spring-grpc.version>
+        <spring-grpc.version>1.0.2</spring-grpc.version>
         <!-- Müssen zur verwendeten spring-grpc-Version passen -->
         <grpc.version>1.70.0</grpc.version>
         <protobuf.version>4.29.3</protobuf.version>
@@ -30,7 +29,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.springframework.grpc</groupId>
-                <artifactId>spring-grpc-bom</artifactId>
+                <artifactId>spring-grpc-dependencies</artifactId>
                 <version>${spring-grpc.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -57,6 +56,13 @@
             <artifactId>spring-grpc-spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- Benötigt für generierten gRPC-Code (javax.annotation.Generated) -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
         <!-- ===== Test ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,8 +70,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test-autoconfigure</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.graphql</groupId>
             <artifactId>spring-graphql-test</artifactId>
+            <version>2.0.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>

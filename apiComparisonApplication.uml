@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>SPRING</ID>
+  <OriginalElement>module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication</OriginalElement>
+  <nodes>
+    <node x="-100.0" y="122.0">module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication</node>
+    <node x="218.0" y="54.0">module=api-comparison-spring;bean_class=de.cavdar.api.graphql.ProductGraphQLController;bean_name=productGraphQLController</node>
+    <node x="262.5" y="122.0">module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductService;bean_name=productService</node>
+    <node x="235.0" y="190.0">module=api-comparison-spring;bean_class=de.cavdar.api.rest.ProductRestController;bean_name=productRestController</node>
+    <node x="249.0" y="258.0">module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductRepository;bean_name=productRepository</node>
+    <node x="244.0" y="-14.0">module=api-comparison-spring;bean_class=de.cavdar.api.grpc.ProductGrpcService;bean_name=productGrpcService</node>
+    <node x="-120.0" y="331.0">module=api-comparison-spring;bean_class=org.springframework.web.service.registry.HttpServiceProxyRegistry;bean_name=httpServiceProxyRegistry</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductService;bean_name=productService" target="module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductRepository;bean_name=productRepository" relationship="depends on">
+      <point x="75.0" y="7.0" />
+      <point x="477.0" y="143.0" />
+      <point x="477.0" y="272.0" />
+      <point x="88.5" y="-0.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.graphql.ProductGraphQLController;bean_name=productGraphQLController" target="module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductService;bean_name=productService" relationship="depends on">
+      <point x="0.0" y="14.0" />
+      <point x="0.0" y="-14.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication" target="module=api-comparison-spring;bean_class=de.cavdar.api.graphql.ProductGraphQLController;bean_name=productGraphQLController" relationship="">
+      <point x="119.0" y="-0.0" />
+      <point x="178.0" y="136.0" />
+      <point x="178.0" y="68.0" />
+      <point x="-119.5" y="-0.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication" target="module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductService;bean_name=productService" relationship="">
+      <point x="119.0" y="-0.0" />
+      <point x="-75.0" y="-0.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.grpc.ProductGrpcService;bean_name=productGrpcService" target="module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductService;bean_name=productService" relationship="depends on">
+      <point x="93.5" y="-0.0" />
+      <point x="477.0" y="0.0" />
+      <point x="477.0" y="129.0" />
+      <point x="75.0" y="-7.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication" target="module=api-comparison-spring;bean_class=de.cavdar.api.rest.ProductRestController;bean_name=productRestController" relationship="">
+      <point x="119.0" y="-0.0" />
+      <point x="178.0" y="136.0" />
+      <point x="178.0" y="204.0" />
+      <point x="-102.5" y="-0.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication" target="module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication" relationship="">
+      <point x="-119.0" y="-0.0" />
+      <point x="-120.0" y="136.0" />
+      <point x="-120.0" y="170.0" />
+      <point x="19.0" y="170.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication" target="module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductRepository;bean_name=productRepository" relationship="">
+      <point x="119.0" y="-0.0" />
+      <point x="178.0" y="136.0" />
+      <point x="178.0" y="272.0" />
+      <point x="-88.5" y="-0.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.ApiComparisonApplication;bean_name=apiComparisonApplication" target="module=api-comparison-spring;bean_class=de.cavdar.api.grpc.ProductGrpcService;bean_name=productGrpcService" relationship="">
+      <point x="119.0" y="-0.0" />
+      <point x="178.0" y="136.0" />
+      <point x="178.0" y="0.0" />
+      <point x="-93.5" y="-0.0" />
+    </edge>
+    <edge source="module=api-comparison-spring;bean_class=de.cavdar.api.rest.ProductRestController;bean_name=productRestController" target="module=api-comparison-spring;bean_class=de.cavdar.api.domain.ProductService;bean_name=productService" relationship="depends on">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="false" x="178.5" y="172.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Local context</Category>
+    <Category>Properties</Category>
+    <Category>Show Borders</Category>
+  </Categories>
+</Diagram>
+

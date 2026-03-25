@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>SpringLocalModels</ID>
+  <OriginalElement>module=api-comparison-spring</OriginalElement>
+  <nodes>
+    <node x="-120.0" y="122.0">de.cavdar.api.ApiComparisonApplication</node>
+    <node x="244.5" y="54.0">de.cavdar.api.domain.ProductService</node>
+    <node x="200.0" y="122.0">de.cavdar.api.graphql.ProductGraphQLController</node>
+    <node x="217.0" y="258.0">de.cavdar.api.rest.ProductRestController</node>
+    <node x="231.0" y="-14.0">de.cavdar.api.domain.ProductRepository</node>
+    <node x="226.0" y="190.0">de.cavdar.api.grpc.ProductGrpcService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="de.cavdar.api.ApiComparisonApplication" target="de.cavdar.api.graphql.ProductGraphQLController" relationship="">
+      <point x="120.0" y="-0.0" />
+      <point x="-119.5" y="-0.0" />
+    </edge>
+    <edge source="de.cavdar.api.ApiComparisonApplication" target="de.cavdar.api.rest.ProductRestController" relationship="">
+      <point x="120.0" y="-0.0" />
+      <point x="160.0" y="136.0" />
+      <point x="160.0" y="272.0" />
+      <point x="-102.5" y="-0.0" />
+    </edge>
+    <edge source="de.cavdar.api.ApiComparisonApplication" target="de.cavdar.api.grpc.ProductGrpcService" relationship="">
+      <point x="120.0" y="-0.0" />
+      <point x="160.0" y="136.0" />
+      <point x="160.0" y="204.0" />
+      <point x="-93.5" y="-0.0" />
+    </edge>
+    <edge source="de.cavdar.api.ApiComparisonApplication" target="de.cavdar.api.domain.ProductRepository" relationship="">
+      <point x="120.0" y="-0.0" />
+      <point x="160.0" y="136.0" />
+      <point x="160.0" y="0.0" />
+      <point x="-88.5" y="-0.0" />
+    </edge>
+    <edge source="de.cavdar.api.ApiComparisonApplication" target="de.cavdar.api.domain.ProductService" relationship="">
+      <point x="120.0" y="-0.0" />
+      <point x="160.0" y="136.0" />
+      <point x="160.0" y="68.0" />
+      <point x="-75.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="false" x="159.5" y="136.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Show Borders</Category>
+    <Category>Show filesets as groups</Category>
+  </Categories>
+</Diagram>
+
